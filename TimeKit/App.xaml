@@ -4,5 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TimeKit"
     RequestedTheme="Light">
-
+    <Application.Resources>
+        <LinearGradientBrush x:Key="hiraethBackground"
+                             StartPoint="0,0"
+                             EndPoint="1,0.5" Opacity="0.5">
+            <LinearGradientBrush.RelativeTransform>
+                <CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="-45"/>
+            </LinearGradientBrush.RelativeTransform>
+            
+            <GradientStop Offset="0" Color="White"/>
+            <GradientStop Color="#EDF0FE" Offset="0.6"/>
+            <GradientStop Offset="0.8" Color="#B4C6F0"/>
+        </LinearGradientBrush>
+    </Application.Resources>
 </Application>
