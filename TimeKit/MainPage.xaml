@@ -8,6 +8,54 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource hiraethBackground}">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel Margin="5,7">
+            <StackPanel RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource menuTextSet}" 
+                           Text="Log in"
+                           VerticalAlignment="Center"
+                           Margin="0,0,5,0"/>
+                <Button Content="Sign Up" 
+                        Style="{StaticResource buttonType}"
+                        RelativePanel.AlignRightWithPanel="True"
+                        Margin="10,0,0,0"/>
+            </StackPanel>
 
+            <TextBlock x:Name="logo"
+                       Text="TimeKit"
+                       FontWeight="ExtraBold"
+                       FontFamily="Consolas"
+                       Foreground="#2543C5"
+                       FontSize="45"
+                       Margin="20,0"
+                       RelativePanel.AlignLeftWithPanel="True"/>
+
+            <StackPanel RelativePanel.AlignHorizontalCenterWithPanel="True" Orientation="Horizontal">
+                <Button>
+                    <TextBlock Text="Services" Style="{StaticResource menuTextSet}" Margin="0,0,5,0"/>
+                </Button>
+                <Button>
+                    <TextBlock Text="Customers" Style="{StaticResource menuTextSet}" Margin="5,0"/>
+                </Button>
+                <Button>
+                    <TextBlock Text="Pricing" Style="{StaticResource menuTextSet}" Margin="5,0"/>
+                </Button>
+                <Button>
+                    <TextBlock Text="Developers" Style="{StaticResource menuTextSetIsSelected}"/>
+                </Button>
+                
+                
+                
+            </StackPanel>
+        </RelativePanel>
+        
+        
+        
+        
     </Grid>
 </Page>
