@@ -11,10 +11,33 @@
             <LinearGradientBrush.RelativeTransform>
                 <CompositeTransform CenterY="0.5" CenterX="0.5" Rotation="-45"/>
             </LinearGradientBrush.RelativeTransform>
-            
             <GradientStop Offset="0" Color="White"/>
             <GradientStop Color="#EDF0FE" Offset="0.6"/>
             <GradientStop Offset="0.8" Color="#B4C6F0"/>
         </LinearGradientBrush>
+        
+        <Style x:Key="menuIconSet" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        
+        <Style x:Key="menuIconSetIsSelected" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#09186A"/>
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        
+        <Style x:Key="headingText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#060607"/>
+            <Setter Property="FontFamily" Value="Open Sans"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+        
+        <Style x:Key="bodyText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#2543C5"/>
+            <Setter Property="FontFamily" Value="Open Sans"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
     </Application.Resources>
 </Application>
