@@ -45,17 +45,17 @@
             <Setter Property="FontSize" Value="50"/>
         </Style>
 
-        <Style x:Key="bodyText" TargetType="TextBlock">
+        <Style x:Key="subText" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#2543C5"/>
             <Setter Property="FontFamily" Value="Open Sans"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="20"/>
         </Style>
 
         <Style x:Key="buttonType" TargetType="Button">
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderBrush" Value="White"/>
             <Setter Property="Foreground" Value="#09186A"/>
-            <Setter Property="FontFamily" Value="Open Sans"/>
+            <Setter Property="FontFamily" Value="Open Sans"/>            
         </Style>
     </Application.Resources>
 </Application>
