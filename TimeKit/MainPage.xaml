@@ -7,26 +7,44 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource hiraethBackground}">
+    <Grid>
         
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <RelativePanel Margin="5,7">
-            <StackPanel RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
-                <TextBlock Style="{StaticResource menuTextSet}" 
+        
+        <!--Top Header-->
+        
+        <Grid Background="#FFE0E0E0">
+            <RelativePanel Margin="5,7">
+                <StackPanel RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
+                    <Button Style="{ThemeResource TextBlockButtonStyle}"
+                            x:Name="logInButton"
+                            Click="logInButton_Click">
+                        <TextBlock Style="{StaticResource menuTextSet}" 
                            Text="Log in"
                            VerticalAlignment="Center"
                            Margin="0,0,5,0"/>
-                <Button Content="Sign Up" 
-                        Style="{StaticResource buttonType}"
-                        RelativePanel.AlignRightWithPanel="True"
-                        Margin="10,0,0,0"/>
-            </StackPanel>
+                    </Button>
+                    <Button Style="{ThemeResource TextBlockButtonStyle}"
+                            RelativePanel.AlignRightWithPanel="True"
+                            Margin="10,0,0,0"
+                            Name="signUpButton"
+                            Click="signUpButton_Click">
+                        
+                        <Border CornerRadius="7" 
+                            Background="White"
+                            >
+                            <TextBlock Style="{StaticResource menuTextSetIsSelected}" 
+                           Text="Sign Up"
+                           VerticalAlignment="Center"
+                           Margin="10"/>
+                        </Border>
+                    </Button>
+                </StackPanel>
 
-            <TextBlock x:Name="logo"
+                <TextBlock x:Name="logo"
                        Text="TimeKit"
                        FontWeight="ExtraBold"
                        FontFamily="Consolas"
@@ -35,27 +53,53 @@
                        Margin="20,0"
                        RelativePanel.AlignLeftWithPanel="True"/>
 
-            <StackPanel RelativePanel.AlignHorizontalCenterWithPanel="True" Orientation="Horizontal">
-                <Button>
-                    <TextBlock Text="Services" Style="{StaticResource menuTextSet}" Margin="0,0,5,0"/>
-                </Button>
-                <Button>
-                    <TextBlock Text="Customers" Style="{StaticResource menuTextSet}" Margin="5,0"/>
-                </Button>
-                <Button>
-                    <TextBlock Text="Pricing" Style="{StaticResource menuTextSet}" Margin="5,0"/>
-                </Button>
-                <Button>
-                    <TextBlock Text="Developers" Style="{StaticResource menuTextSetIsSelected}"/>
-                </Button>
-                
-                
-                
+                <StackPanel RelativePanel.AlignHorizontalCenterWithPanel="True" 
+                            Orientation="Horizontal"
+                            RelativePanel.AlignVerticalCenterWithPanel="True">
+                    <Button Style="{ThemeResource TextBlockButtonStyle}">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,5,0">
+                            <TextBlock Text="Services" Style="{StaticResource menuTextSet}"/>
+                            <TextBlock Text="&#xE019;" 
+                                       Style="{StaticResource menuIconSet}"
+                                       VerticalAlignment="Center"
+                                       Margin="3,0,0,0"
+                                       FontSize="8"
+                                       FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{ThemeResource TextBlockButtonStyle}">
+                        <TextBlock Text="Customers" Style="{StaticResource menuTextSet}" Margin="5,0"/>
+                    </Button>
+                    <Button Style="{ThemeResource TextBlockButtonStyle}">
+                        <TextBlock Text="Pricing" Style="{StaticResource menuTextSet}" Margin="5,0"/>
+                    </Button>
+                    <Button Style="{ThemeResource TextBlockButtonStyle}">
+                        <TextBlock Text="Developers" Style="{StaticResource menuTextSetIsSelected}"/>
+                    </Button>
+                </StackPanel>
+            </RelativePanel>
+        </Grid>
+        
+        <!--Body-->
+        
+        <Grid Grid.Row="1" Background="{StaticResource hiraethBackground}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0,50,0,0">
+                <TextBlock Style="{StaticResource headingText}"
+                           Text="A new Standerd for&#x0a;Scheduling"
+                           TextAlignment="Center"/>
             </StackPanel>
-        </RelativePanel>
-        
-        
-        
-        
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="No matter what booking scenario you have, Timekit is the customizable&#x0a;and straightforward solution for you"
+                           Style="{StaticResource bodyText}"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Grid>                                
     </Grid>
 </Page>

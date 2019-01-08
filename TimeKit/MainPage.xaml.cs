@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Composition;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,21 @@ namespace TimeKit
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void logInButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void signUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
