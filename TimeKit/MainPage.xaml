@@ -16,43 +16,50 @@
 
         <!--Top Header-->
 
-        <Grid Background="#FFE0E0E0">
+        <Grid Background="White">
             <RelativePanel Margin="5,7">
+                
+                <!--Logo-->
+                <TextBlock x:Name="logo"
+                           Text="TimeKit"
+                           FontWeight="ExtraBold"
+                           FontFamily="Consolas"
+                           Foreground="#2543C5"
+                           FontSize="45"
+                           Margin="20,0"
+                           RelativePanel.AlignLeftWithPanel="True"/>
+                
+                <!--Right Corner Buttons-->
                 <StackPanel RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
+                    
+                    <!--Log In Button-->                    
                     <Button Style="{ThemeResource TextBlockButtonStyle}"
                             x:Name="logInButton"
                             Click="logInButton_Click">
                         <TextBlock Style="{StaticResource menuTextSet}" 
-                           Text="Log in"
-                           VerticalAlignment="Center"
-                           Margin="0,0,5,0"/>
+                                   Text="Log in"
+                                   VerticalAlignment="Center"
+                                   Margin="0,0,5,0"/>
                     </Button>
+                    
+                    <!--Sign Up Button-->
                     <Button Style="{ThemeResource TextBlockButtonStyle}"
                             RelativePanel.AlignRightWithPanel="True"
                             Margin="10,0,0,0"
                             Name="signUpButton"
                             Click="signUpButton_Click">
-
                         <Border CornerRadius="7" 
-                            Background="White"
-                            >
+                                Background="#09186A">
                             <TextBlock Style="{StaticResource menuTextSetIsSelected}" 
-                           Text="Sign Up"
-                           VerticalAlignment="Center"
-                           Margin="10"/>
+                                       Text="Sign Up"
+                                       Foreground="White"
+                                       VerticalAlignment="Center"
+                                       Margin="10"/>
                         </Border>
                     </Button>
                 </StackPanel>
-
-                <TextBlock x:Name="logo"
-                       Text="TimeKit"
-                       FontWeight="ExtraBold"
-                       FontFamily="Consolas"
-                       Foreground="#2543C5"
-                       FontSize="45"
-                       Margin="20,0"
-                       RelativePanel.AlignLeftWithPanel="True"/>
-
+                
+                <!--Middle Buttons-->
                 <StackPanel RelativePanel.AlignHorizontalCenterWithPanel="True" 
                             Orientation="Horizontal"
                             RelativePanel.AlignVerticalCenterWithPanel="True">
@@ -77,54 +84,15 @@
                         <TextBlock Text="Developers" Style="{StaticResource menuTextSetIsSelected}"/>
                     </Button>
                 </StackPanel>
+                
             </RelativePanel>
         </Grid>
 
         <!--Body-->
 
-        <Grid Grid.Row="1" Background="{StaticResource hiraethBackground}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Path Data="M-50,458 C-50,458 210,412 330,456 C450,500 930,711.002 1290,344.999 L1292,729.002 L-50,729.002 z" 
-                  Fill="White"  
-                  Grid.Row="1" Stretch="Fill"
-                  UseLayoutRounding="False" 
-                  d:LayoutOverrides="VerticalAlignment, LeftPosition, RightPosition, TopPosition, BottomPosition"/>
+        <Frame Name="bodyContent"
+                   Grid.Row="1">
 
-            <StackPanel HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Margin="0,50,0,0">
-                <TextBlock Style="{StaticResource headingText}"
-                           Text="A new Standerd for&#x0a;Scheduling"
-                           TextAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Grid.Row="1">
-                <TextBlock Text="No matter what booking scenario you have, Timekit is the customizable&#x0a;and straightforward solution for you"
-                           Style="{StaticResource subText}"
-                           TextAlignment="Center"
-                           HorizontalAlignment="Center"/>
-
-                <GridView ItemsSource="{x:Bind Options}">
-                    <GridView.ItemTemplate>
-                        <DataTemplate x:DataType="data:Options">
-                            <StackPanel HorizontalAlignment="Center">
-                                <Border Width="150"
-                                        Height="150">
-                                    <Image Width="150" 
-                                       Margin="2,0,0,5"
-                                       Source="{x:Bind coverImage}"/>
-                                </Border>
-                                
-                                <TextBlock FontSize="20" Text="{x:Bind Title}"
-                                           Margin="2,5,0,0"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </GridView.ItemTemplate>
-                </GridView>
-            </StackPanel>
-        </Grid>
-
+        </Frame>
     </Grid>
 </Page>

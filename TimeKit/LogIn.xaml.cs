@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI.Composition;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -13,35 +12,19 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using TimeKit;
-using Windows.UI.ViewManagement;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace TimeKit
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class LogIn : Page
     {
-        
-        public MainPage()
+        public LogIn()
         {
-            
             this.InitializeComponent();
-            bodyContent.Navigate(typeof(GetStarted));
-                        
-        }
-
-        private void logInButton_Click(object sender, RoutedEventArgs e)
-        {
-            bodyContent.Navigate(typeof(LogIn));
-        }
-
-        private void signUpButton_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)

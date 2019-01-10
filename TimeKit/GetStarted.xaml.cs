@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI.Composition;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -13,40 +13,30 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using TimeKit;
-using Windows.UI.ViewManagement;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace TimeKit
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class GetStarted : Page
     {
-        
-        public MainPage()
+        public GetStarted()
         {
-            
             this.InitializeComponent();
-            bodyContent.Navigate(typeof(GetStarted));
-                        
         }
 
-        private void logInButton_Click(object sender, RoutedEventArgs e)
+        private void getStarted_Click(object sender, RoutedEventArgs e)
         {
-            bodyContent.Navigate(typeof(LogIn));
+            Frame.Navigate(typeof(Home));
         }
 
-        private void signUpButton_Click(object sender, RoutedEventArgs e)
+        private void showPref_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
+            App.getStartedPagePref = true;
             
-        }
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

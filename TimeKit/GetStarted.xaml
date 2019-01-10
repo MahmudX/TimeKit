@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="TimeKit.GetStarted"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TimeKit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource hiraethBackground}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--BG Path-->
+            <Path Data="M-50,458 C-50,458 210,412 330,456 C450,500 930,711.002 1290,344.999 L1292,729.002 L-50,729.002 z" 
+                  Fill="White"
+                  Grid.Row="1"
+                  Stretch="Fill"
+                  UseLayoutRounding="False" 
+                  VerticalAlignment="Bottom"/>
+
+            <!--Header Text-->
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,50,0,0">
+            
+                <TextBlock Style="{StaticResource headingText}"
+                           Text="A new Standerd for&#x0a;Scheduling"
+                           TextAlignment="Center"/>
+                
+                <TextBlock Text="No matter what booking scenario you have, Timekit is the customizable&#x0a;and straightforward solution for you"
+                           Style="{StaticResource subText}"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Grid.Row="1"
+                           Margin="0,25,0,0"/>
+        </StackPanel>
+        <Button Style="{ThemeResource TextBlockButtonStyle}"
+                Grid.Row="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                x:Name="getStarted"
+                Click="getStarted_Click">
+            <Border Background="#09186A"
+                    CornerRadius="20">
+                <TextBlock Text="Get Started" 
+                           Style="{StaticResource subText}"
+                           Foreground="White"
+                           Margin="20"
+                           FontSize="40"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+            </Border>
+        </Button>
+        <CheckBox Name="showPref"
+                  Grid.Row="1"
+                  VerticalAlignment="Bottom"
+                  HorizontalAlignment="Left"
+                  Margin="20,0,0,10"
+                  IsEnabledChanged="showPref_IsEnabledChanged"
+                  Content="Don't show this page on start up">
+            
+        </CheckBox>
+    </Grid>
+</Page>
